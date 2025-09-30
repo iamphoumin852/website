@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en"> 
+<!-- Mirrored from kamranahmed.info/posts/latency-vs-throughput by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Sep 2025 03:09:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="../favicon.svg"><title>System Design: Latency vs Throughput - cs.fyi</title><meta name="description" content="Learn the difference between these two important measures of system performance."><link rel="preconnect" href="https://www.google-analytics.com/"><link rel="stylesheet" href="../_astro/background-less.BKeRS0Lf.css">
+<style>@keyframes fade-appear{0%{border-radius:.5rem;--tw-bg-opacity: 1;background-color:rgb(55 65 81 / var(--tw-bg-opacity));--tw-text-opacity: 1;color:rgb(254 249 195 / var(--tw-text-opacity))}}@keyframes slide-fade-up-in{0%{opacity:0;transform:translateY(.5rem)}to{opacity:1;transform:translateY(0)}}[data-rmiz-modal-content]{--tw-bg-opacity: 1;background-color:rgb(24 24 27 / var(--tw-bg-opacity));--tw-text-opacity: 1;color:rgb(243 244 246 / var(--tw-text-opacity))}::-moz-selection{--tw-bg-opacity: 1;background-color:rgb(250 204 21 / var(--tw-bg-opacity));--tw-text-opacity: 1;color:rgb(113 63 18 / var(--tw-text-opacity))}::selection{--tw-bg-opacity: 1;background-color:rgb(250 204 21 / var(--tw-bg-opacity));--tw-text-opacity: 1;color:rgb(113 63 18 / var(--tw-text-opacity))}
+</style><script type="module">window.fireEvent=e=>{const{action:n,category:t,label:a,value:i}=e;if(!window.gtag){console.warn("Missing GTAG - Analytics disabled");return}window.gtag("event",n,{event_category:t,event_label:a,value:i})};
+</script>
+<script type="module" src="../_astro/page.DFwqf4PB.js"></script></head> <body class="bg-zinc-900 text-zinc-400"> <div class="mx-auto max-w-[750px] px-4 pb-20 pt-6 text-lg sm:px-12 md:px-16"> <div class="flex items-center justify-between gap-5 rounded-3xl border border-zinc-700/40 bg-zinc-800 px-5 text-base sm:px-6"> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t.html),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="ZursTB" prefix="r0" component-url="/_astro/MobileNav.DoOW3-tu.js" component-export="MobileNav" renderer-url="/_astro/client.BStqXOaq.js" props="{}" ssr="" client="load" opts="{&quot;name&quot;:&quot;MobileNav&quot;,&quot;value&quot;:true}" await-children=""><div class="relative block sm:hidden"><button type="button" class="flex items-center py-3 text-sm transition-colors hover:text-zinc-300 sm:hidden sm:text-base"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg><span> </span></button></div><!--astro:end--></astro-island> <div class="hidden items-center gap-6 sm:flex"> <a class="relative flex items-center gap-2 py-3 pr-1 text-sm transition-colors hover:text-zinc-300 sm:text-base" href="../index.html" target="_self" data-astro-prefetch="load"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Home</a> <a class="relative flex items-center gap-2 py-3 pr-1 text-sm transition-colors hover:text-zinc-300 sm:text-base" href="../work.html" target="_self" data-astro-prefetch="load"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>Work</a> <a class="relative flex items-center gap-2 py-3 pr-1 text-sm transition-colors hover:text-zinc-300 sm:text-base" href="../projects.html" target="_self" data-astro-prefetch="load"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path></svg>Projects</a> <a class="relative flex items-center gap-2 py-3 pr-1 text-sm transition-colors hover:text-zinc-300 sm:text-base" href="../posts.html" target="_self" data-astro-prefetch="load"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-text"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"></path><path d="M8 11h8"></path><path d="M8 7h6"></path></svg>Posts<span class="absolute -bottom-px left-0 right-0 h-px bg-gradient-to-r from-zinc-400/0 via-zinc-400/40 to-zinc-400/0"></span></a> </div> <a class="relative flex items-center gap-2 py-3 pr-1 text-sm transition-colors hover:text-zinc-300 sm:text-base" href="../cdn-cgi/l/email-protection.html#8ae1ebe7f8ebe4ebe2e7efeea4f9efcaede7ebe3e6a4e9e5e7" target="_self" data-astro-prefetch="load"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>Say Hi</a> </div> <div>  <div class="container"> <div class="mb-6 mt-12"> <h1 class="mb-2 text-balance text-4xl font-bold leading-tight text-neutral-100"> System Design: Latency vs Throughput </h1> <p class="text-base text-neutral-400"> January 19, 2023 </p> </div> <div class="prose prose-img:bg-white prose-img:px-2 prose-img:py-2 prose-img:rounded-md prose-lg prose-quoteless prose-blockquote:text-zinc-300 prose-blockquote:border-l-8 prose-blockquote:border-l-current prose-blockquote:font-normal prose-neutral-300 prose-h3:text-neutral-100 prose-h4:text-neutral-100 prose-h2:text-neutral-100 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden prose-a:text-blue-300 prose-code:text-yellow-200 prose-strong:text-white prose-h1:text-balance prose-h2:text-balance prose-h3:text-balance prose-h4:text-balance prose-h5:text-balance leading-relaxed text-neutral-300"> <p>Latency and throughput are two important measures of a system’s performance.</p>
+<p>In this article, we’ll learn what they are and how they relate to each other in the context of system design. We will also look at a real-world example of how these two metrics are used to design a system.</p>
+<h2 id="latency">Latency</h2>
+<blockquote>
+<p>Latency refers to the amount of time it takes for a system to respond to a request. It is often measured in milliseconds or microseconds.</p>
+</blockquote>
+<p>Latency is a measure of how long it takes for a system to complete a task or process data. It is often measured in milliseconds or microseconds and is an important metric for determining the performance of a system. High latency can lead to slow performance, while low latency can result in faster and more responsive systems.</p>
+<p>Latency can be caused by various factors e.g., network i.e. time it takes for data to travel through the network (more hops, high latency), network congestion, inefficient algorithms, load on the resources and so on.</p>
+<h2 id="throughput">Throughput</h2>
+<blockquote>
+<p>Throughput refers to the number of requests a system can handle at the same time. It is often measured in requests per second, transactions per second, or bits per second.</p>
+</blockquote>
+<p>Throughput refers to the number of requests that a system can handle at the same time or the number of units of data that can be processed in a given period of time. Throughput is often measured in requests per second, transactions per second, or bits per second.</p>
+<p>Throughput can be limited by various factors, such as the capacity of the systems involved, the number of available resources, and the efficiency of the algorithms used to process the data. For example, in a network, throughput can be limited by the bandwidth available or the number of connections that can be made at the same time. In a computer, it can be limited by the CPU or memory capacity.</p>
+<p>Throughput is an important metric to consider when designing and evaluating systems such as networks, storage systems, and databases. High throughput can lead to more responsive systems and more efficient use of resources, while low throughput can result in slow performance and increased latency.</p>
+<h2 id="relationship-between-latency-and-throughput">Relationship Between Latency and Throughput</h2>
+<p>In most systems, there is a trade-off between latency and throughput, as increasing throughput often requires sacrificing some of the time it takes for the system to respond to each individual request (latency). Therefore, when designing and evaluating systems, it is important to consider both latency and throughput to find the right balance.</p>
+<h3 id="example-web-server">Example: Web Server</h3>
+<p>One real-world example to show the relationship between the two is the design of a web server. In this case, the goal is to balance the need for low latency (so that web pages load quickly) with the need for high throughput (so that the server can handle many requests at the same time).</p>
+<p>One way to increase throughput is to add more servers to the system, which allows the system to handle more requests simultaneously. However, this can lead to increased latency, as the requests may need to be routed to different servers and the data may need to be replicated across those servers.</p>
+<p><img src="https://imgur.com/9PiGMyA" alt="Web Server Example"></p>
+<p>Another way to increase throughput is to optimize the web server software to handle more requests at the same time. However, this can also lead to increased latency, as the server may need to use more resources to keep up with the increased demand.</p>
+<p>In this case, the system design needs to balance these trade-offs to find the right balance between low latency and high throughput. This may involve using caching and load balancing techniques to minimize the latency while increasing the throughput.</p>
+<h3 id="example-databases">Example: Databases</h3>
+<p>Another example is from the field of databases. A database system that prioritizes low latency may use more memory to cache frequently accessed data, which allows for faster retrieval of data but may decrease the overall throughput as it limits the amount of available memory for handling other requests.</p>
+<p><img src="https://imgur.com/3mnR6T2" alt="Database Example"></p>
+<p>Generally, you should aim for maximal throughput with acceptable latency.</p> </div> </div>  </div> </div>  <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-139582634-1"></script> <script>
+    // @ts-nocheck
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-58155965-1');
+</script> <script type="text/javascript">
+  (function (C, A, L) {
+    let p = function (a, ar) {
+      a.q.push(ar);
+    };
+    let d = C.document;
+    C.Cal =
+      C.Cal ||
+      function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement('script')).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () {
+            p(api, arguments);
+          };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          typeof namespace === 'string'
+            ? (cal.ns[namespace] = api) && p(api, ar)
+            : p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+  })(window, '../../app.cal.com/embed/embed.js', 'init');
+  Cal('init', { origin: 'https://cal.com' });
+
+  Cal('ui', {
+    styles: { branding: { brandColor: '#000000' } },
+    hideEventTypeDetails: false,
+    layout: 'month_view',
+  });
+</script> </body>
+<!-- Mirrored from kamranahmed.info/posts/latency-vs-throughput by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Sep 2025 03:09:38 GMT -->
+</html>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:https://github.com/kamranahmedse/driver.js/releases</id>
+  <link type="text/html" rel="alternate" href="https://github.com/kamranahmedse/driver.js/releases"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/kamranahmedse/driver.js/releases.atom"/>
+  <title>Release notes from driver.js</title>
+  <updated>2025-05-13T08:38:12Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/124792826/1.3.6</id>
+    <updated>2025-05-13T08:44:24Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/kamranahmedse/driver.js/releases/tag/1.3.6"/>
+    <title>1.3.6</title>
+    <content type="html">&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Fix - Buttons not clickable when they have nested elements &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;2882263701&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/560&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/560/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/560&quot;&gt;#560&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Documents the missing options &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;2912934586&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/562&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/562/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/562&quot;&gt;#562&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Fix - Module not found: Default condition should be last one &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;2826663050&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/545&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/issues/545/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/issues/545&quot;&gt;#545&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Fix - Type definition for onPopoverRender &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;2827493867&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/548&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/548/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/548&quot;&gt;#548&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Fix - CSS not importable in CSS files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thank you &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/jarikmarwede/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/jarikmarwede&quot;&gt;@jarikmarwede&lt;/a&gt; &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/SliverYuki/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/SliverYuki&quot;&gt;@SliverYuki&lt;/a&gt; and &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/ervan23/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/ervan23&quot;&gt;@ervan23&lt;/a&gt; for the contributions 🙏&lt;/p&gt;</content>
+    <author>
+      <name>kamranahmedse</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4921183?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/124792826/1.3.5</id>
+    <updated>2025-02-03T17:34:30Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/kamranahmedse/driver.js/releases/tag/1.3.5"/>
+    <title>1.3.5</title>
+    <content type="html">&lt;p&gt;Bump version 1.3.5&lt;/p&gt;</content>
+    <author>
+      <name>kamranahmedse</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4921183?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/124792826/1.3.4</id>
+    <updated>2025-02-02T15:59:32Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/kamranahmedse/driver.js/releases/tag/1.3.4"/>
+    <title>1.3.4</title>
+    <content type="html">&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Fix &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1900611640&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/431&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/issues/431/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/issues/431&quot;&gt;#431&lt;/a&gt; - Scroll to top for taller elements&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Fixes issue where CSS is not importable in CSS file using &lt;code&gt;@import&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>kamranahmedse</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4921183?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/124792826/1.3.3</id>
+    <updated>2025-02-02T15:42:10Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/kamranahmedse/driver.js/releases/tag/1.3.3"/>
+    <title>1.3.3</title>
+    <content type="html">&lt;p&gt;Bump version 1.3.3&lt;/p&gt;</content>
+    <author>
+      <name>kamranahmedse</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4921183?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/124792826/1.3.2</id>
+    <updated>2025-02-02T14:33:15Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/kamranahmedse/driver.js/releases/tag/1.3.2"/>
+    <title>1.3.2</title>
+    <content type="html">&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Fixes alignment issue in some cases &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;2611757735&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/531&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/issues/531/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/issues/531&quot;&gt;#531&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Improves documentation (Thanks &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/jarikmarwede/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/jarikmarwede&quot;&gt;@jarikmarwede&lt;/a&gt; &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;2822729874&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/544&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/544/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/544&quot;&gt;#544&lt;/a&gt;)&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Exposes &lt;code&gt;driver&lt;/code&gt; instance in hooks &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;2763360037&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/537&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/issues/537/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/issues/537&quot;&gt;#537&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Allows element to be function type (Thanks &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/richie-south/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/richie-south&quot;&gt;@richie-south&lt;/a&gt; &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;2052455352&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/463&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/463/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/463&quot;&gt;#463&lt;/a&gt;)&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Allows disabling interactions with active element (Thanks &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/tmsperera/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/tmsperera&quot;&gt;@tmsperera&lt;/a&gt; &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;2650312107&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/534&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/534/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/534&quot;&gt;#534&lt;/a&gt;)&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Allows overlay click to navigate to next step (Thanks &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/CryUshio/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/CryUshio&quot;&gt;@CryUshio&lt;/a&gt; &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;2335151148&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/499&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/499/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/499&quot;&gt;#499&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>kamranahmedse</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4921183?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/124792826/1.3.1</id>
+    <updated>2023-11-10T18:14:53Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/kamranahmedse/driver.js/releases/tag/1.3.1"/>
+    <title>1.3.1</title>
+    <content type="html">&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Add programmatically destroy to api docs &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1924607911&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/438&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/438/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/438&quot;&gt;#438&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Add license to package.json &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1905148847&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/432&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/432/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/432&quot;&gt;#432&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Fix error in vite config &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1872966697&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/416&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/416/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/416&quot;&gt;#416&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>kamranahmedse</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4921183?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/124792826/1.3.0</id>
+    <updated>2023-09-04T10:44:41Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/kamranahmedse/driver.js/releases/tag/1.3.0"/>
+    <title>1.3.0</title>
+    <content type="html">&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Update vite configuration to support ES2019 &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1875334243&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/422&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/422/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/422&quot;&gt;#422&lt;/a&gt; &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1872966697&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/416&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/416/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/416&quot;&gt;#416&lt;/a&gt; (Closes &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1860800676&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/409&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/issues/409/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/issues/409&quot;&gt;#409&lt;/a&gt; and &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1862780469&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/410&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/issues/410/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/issues/410&quot;&gt;#410&lt;/a&gt;)&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Popover title to support HTML &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1869381082&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/415&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/415/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/415&quot;&gt;#415&lt;/a&gt; (Closes &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1869366883&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/414&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/issues/414/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/issues/414&quot;&gt;#414&lt;/a&gt;)&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Fixes wrong type definition for &lt;code&gt;onPopoverRender&lt;/code&gt; configuration&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Add validation on class name &lt;a class=&quot;commit-link&quot; data-hovercard-type=&quot;commit&quot; data-hovercard-url=&quot;https://github.com/kamranahmedse/driver.js/commit/288c7deafb5fa0f7e8a6d5d98648a047eb2b2b27/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/commit/288c7deafb5fa0f7e8a6d5d98648a047eb2b2b27&quot;&gt;&lt;tt&gt;288c7de&lt;/tt&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Upgrade all the dependencies to latest&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>kamranahmedse</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4921183?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/124792826/1.2.1</id>
+    <updated>2023-08-04T03:03:21Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/kamranahmedse/driver.js/releases/tag/1.2.1"/>
+    <title>1.2.1</title>
+    <content type="html">&lt;p&gt;Bump version 1.2.1&lt;/p&gt;</content>
+    <author>
+      <name>kamranahmedse</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4921183?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/124792826/1.2.0</id>
+    <updated>2023-08-04T03:12:20Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/kamranahmedse/driver.js/releases/tag/1.2.0"/>
+    <title>1.2.0</title>
+    <content type="html">&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Improvements on types exports &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1825907657&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/384&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/384/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/384&quot;&gt;#384&lt;/a&gt; &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1825924054&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/386&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/386/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/386&quot;&gt;#386&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Fixes &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1827333671&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/389&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/issues/389/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/issues/389&quot;&gt;#389&lt;/a&gt; — &lt;code&gt;getActiveElement&lt;/code&gt; returning old value in popover hooks&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Fixes &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1834164107&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/391&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/issues/391/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/issues/391&quot;&gt;#391&lt;/a&gt; — &lt;code&gt;allowKeyboardControl&lt;/code&gt; config not honored&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; Feat &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1823010157&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/383&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/issues/383/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/issues/383&quot;&gt;#383&lt;/a&gt; — Adds new &lt;code&gt;disableActiveInteraction&lt;/code&gt; config to disable interaction with the active element.&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>kamranahmedse</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4921183?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/124792826/1.1.0</id>
+    <updated>2023-07-23T23:50:41Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/kamranahmedse/driver.js/releases/tag/1.1.0"/>
+    <title>1.1.0</title>
+    <content type="html">&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; &lt;strong&gt;&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1817341535&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/377&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/377/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/377&quot;&gt;#377&lt;/a&gt;&lt;/strong&gt; Implemented focus trapping&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;&quot; disabled=&quot;&quot; class=&quot;task-list-item-checkbox&quot; aria-label=&quot;Completed task&quot; checked=&quot;&quot;&gt; &lt;strong&gt;&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;1817341535&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/kamranahmedse/driver.js/issues/377&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/kamranahmedse/driver.js/pull/377/hovercard&quot; href=&quot;https://github.com/kamranahmedse/driver.js/pull/377&quot;&gt;#377&lt;/a&gt;&lt;/strong&gt; Adds ARIA attributes and use of semantic markup.&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>kamranahmedse</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4921183?s=60&amp;v=4"/>
+  </entry>
+</feed>

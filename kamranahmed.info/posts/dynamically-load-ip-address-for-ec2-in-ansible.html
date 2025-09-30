@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en"> 
+<!-- Mirrored from kamranahmed.info/posts/dynamically-load-ip-address-for-ec2-in-ansible by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Sep 2025 06:11:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="../favicon.svg"><title>Dynamically load IP address from EC2 in Ansible Inventory</title><meta name="description" content="Learn how to dynamically populate the Ansible inventory with the IP address of EC2 instances."><link rel="preconnect" href="https://www.google-analytics.com/"><link rel="stylesheet" href="../_astro/background-less.BKeRS0Lf.css">
+<style>@keyframes fade-appear{0%{border-radius:.5rem;--tw-bg-opacity: 1;background-color:rgb(55 65 81 / var(--tw-bg-opacity));--tw-text-opacity: 1;color:rgb(254 249 195 / var(--tw-text-opacity))}}@keyframes slide-fade-up-in{0%{opacity:0;transform:translateY(.5rem)}to{opacity:1;transform:translateY(0)}}[data-rmiz-modal-content]{--tw-bg-opacity: 1;background-color:rgb(24 24 27 / var(--tw-bg-opacity));--tw-text-opacity: 1;color:rgb(243 244 246 / var(--tw-text-opacity))}::-moz-selection{--tw-bg-opacity: 1;background-color:rgb(250 204 21 / var(--tw-bg-opacity));--tw-text-opacity: 1;color:rgb(113 63 18 / var(--tw-text-opacity))}::selection{--tw-bg-opacity: 1;background-color:rgb(250 204 21 / var(--tw-bg-opacity));--tw-text-opacity: 1;color:rgb(113 63 18 / var(--tw-text-opacity))}
+</style><script type="module">window.fireEvent=e=>{const{action:n,category:t,label:a,value:i}=e;if(!window.gtag){console.warn("Missing GTAG - Analytics disabled");return}window.gtag("event",n,{event_category:t,event_label:a,value:i})};
+</script>
+<script type="module" src="../_astro/page.DFwqf4PB.js"></script></head> <body class="bg-zinc-900 text-zinc-400"> <div class="mx-auto max-w-[750px] px-4 pb-20 pt-6 text-lg sm:px-12 md:px-16"> <div class="flex items-center justify-between gap-5 rounded-3xl border border-zinc-700/40 bg-zinc-800 px-5 text-base sm:px-6"> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t.html),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="ZursTB" prefix="r0" component-url="/_astro/MobileNav.DoOW3-tu.js" component-export="MobileNav" renderer-url="/_astro/client.BStqXOaq.js" props="{}" ssr="" client="load" opts="{&quot;name&quot;:&quot;MobileNav&quot;,&quot;value&quot;:true}" await-children=""><div class="relative block sm:hidden"><button type="button" class="flex items-center py-3 text-sm transition-colors hover:text-zinc-300 sm:hidden sm:text-base"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg><span> </span></button></div><!--astro:end--></astro-island> <div class="hidden items-center gap-6 sm:flex"> <a class="relative flex items-center gap-2 py-3 pr-1 text-sm transition-colors hover:text-zinc-300 sm:text-base" href="../index.html" target="_self" data-astro-prefetch="load"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Home</a> <a class="relative flex items-center gap-2 py-3 pr-1 text-sm transition-colors hover:text-zinc-300 sm:text-base" href="../work.html" target="_self" data-astro-prefetch="load"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>Work</a> <a class="relative flex items-center gap-2 py-3 pr-1 text-sm transition-colors hover:text-zinc-300 sm:text-base" href="../projects.html" target="_self" data-astro-prefetch="load"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path></svg>Projects</a> <a class="relative flex items-center gap-2 py-3 pr-1 text-sm transition-colors hover:text-zinc-300 sm:text-base" href="../posts.html" target="_self" data-astro-prefetch="load"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-text"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"></path><path d="M8 11h8"></path><path d="M8 7h6"></path></svg>Posts<span class="absolute -bottom-px left-0 right-0 h-px bg-gradient-to-r from-zinc-400/0 via-zinc-400/40 to-zinc-400/0"></span></a> </div> <a class="relative flex items-center gap-2 py-3 pr-1 text-sm transition-colors hover:text-zinc-300 sm:text-base" href="../cdn-cgi/l/email-protection.html#5c373d312e3d323d34313938722f391c3b313d3530723f3331" target="_self" data-astro-prefetch="load"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>Say Hi</a> </div> <div>  <div class="container"> <div class="mb-6 mt-12"> <h1 class="mb-2 text-balance text-4xl font-bold leading-tight text-neutral-100"> Dynamically Load Ansible Inventory with EC2 IP </h1> <p class="text-base text-neutral-400"> December 25, 2023 </p> </div> <div class="prose prose-img:bg-white prose-img:px-2 prose-img:py-2 prose-img:rounded-md prose-lg prose-quoteless prose-blockquote:text-zinc-300 prose-blockquote:border-l-8 prose-blockquote:border-l-current prose-blockquote:font-normal prose-neutral-300 prose-h3:text-neutral-100 prose-h4:text-neutral-100 prose-h2:text-neutral-100 prose-code:font-normal prose-code:before:hidden prose-code:after:hidden prose-a:text-blue-300 prose-code:text-yellow-200 prose-strong:text-white prose-h1:text-balance prose-h2:text-balance prose-h3:text-balance prose-h4:text-balance prose-h5:text-balance leading-relaxed text-neutral-300"> <p>Ansible is a great tool for automating infrastructure provisioning. It is agentless, which means that you don’t need to install anything on the target machine. It is also very easy to use and has a lot of modules that you can use to automate your infrastructure.</p>
+<p>Ansible inventory is a file that contains a list of hosts that Ansible can connect to. It is used to define the hosts that Ansible will connect to and the run the tasks on. This file can be either static i.e. you define the hosts manually or dynamic i.e. you define the hosts using a script. Given below is an example of a static inventory file.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="ini"><code><span class="line"><span style="color:#B392F0">[web]</span></span>
+<span class="line"><span style="color:#E1E4E8">16.202.152.100</span></span>
+<span class="line"><span style="color:#E1E4E8">14.201.142.105</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">[db]</span></span>
+<span class="line"><span style="color:#E1E4E8">15.212.122.120</span></span>
+<span class="line"></span></code></pre>
+<p>As you can see, we have two groups <code>[web]</code> and <code>[db]</code> with each group having some IP addresses. The problem with this approach is that if you have a lot of hosts, then it becomes very difficult to manage the inventory file. Also, if you have a dynamic infrastructure where hosts are added and removed frequently, then it becomes even more difficult to manage the inventory file.</p>
+<p>In this article, we will learn how to dynamically populate the Ansible inventory with the IP address of EC2 instances.</p>
+<h2 id="tagging-ec2-instances">Tagging EC2 instances</h2>
+<p>The first step to make it easier to manage the inventory file is to tag the EC2 instances properly. I normally tag the EC2 instances with the following tags at the very least:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Project     = "web-address.com"</span></span>
+<span class="line"><span>Component   = "{COMPONENT}"</span></span>
+<span class="line"><span>Role        = "{ROLE}"</span></span>
+<span class="line"><span>Name        = "{COMPONENT}-{ROLE}-{ENVIROMENT}"</span></span>
+<span class="line"><span>Environment = "{ENVIRONMENT}"</span></span>
+<span class="line"><span>ManagedBy   = "{MANAGED_BY}"</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Details of what each tag means:</p>
+<ul>
+<li><strong>Component</strong>: Name of the component if application consists of several different components e.g. <code>newsletter</code>, <code>blog</code>, <code>app</code>, etc.</li>
+<li><strong>Role</strong>: Role of the EC2 instance e.g. <code>api</code> (backend API), <code>web</code> (customer facing app), <code>db</code> (database server), etc.</li>
+<li><strong>Environment</strong>: Environment of the EC2 instance e.g. <code>production</code>, <code>staging</code>, <code>development</code>, etc.</li>
+<li><strong>ManagedBy</strong>: How the EC2 instance is managed e.g. <code>terraform</code>, <code>ansible</code>, <code>manual</code>, etc.</li>
+<li><strong>Name</strong>: This is the name of the EC2 instance. I normally use the following format: <code>{COMPONENT}-{ROLE}-{ENVIROMENT}</code> e.g. <code>app-api-production</code>, <code>newsletter-db-production</code>, <code>blog-web-staging</code>, etc.</li>
+</ul>
+<p>Having these tags not only makes it easier to manage the inventory file but also makes it easier to manage the EC2 instances themselves e.g. you can easily find all the resources with specific tags, better analyse the cost of the infrastructure, etc.</p>
+<h2 id="dynamic-inventory">Dynamic Inventory</h2>
+<p>There is an Ansible module called <code>aws_ec2</code> that can be used to dynamically populate the inventory file with the IP address of EC2 instances. It can get the IP address of EC2 instances based on the tags that we have defined above and give us hostnames that we can use in our playbooks. It has a <a href="https://docs.ansible.com/ansible/latest/collections/amazon/aws/docsite/aws_ec2_guide.html">pretty decent documentation</a> that you can refer to to get an idea of usage but I will go through the usage here:</p>
+<p>First, we need to create a yaml file that will contain the configuration for the <code>aws_ec2</code> module. The filename must end with <code>aws_ec2.yml</code>, e.g. <code>csfyi.aws_ec2.yml</code>. The contents of the file should be as follows:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#85E89D">plugin</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">aws_ec2</span></span>
+<span class="line"><span style="color:#85E89D">boto_profile</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"{{ lookup('env', 'AWS_PROFILE') }}"</span></span>
+<span class="line"><span style="color:#85E89D">regions</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#9ECBFF">ap-south-1</span></span>
+<span class="line"><span style="color:#85E89D">filters</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">  instance-state-name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">running</span></span>
+<span class="line"><span style="color:#85E89D">keyed_groups</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#85E89D">key</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">tags.get('Component', 'unknown') + "_" + tags.get('Role', 'unknown') + "_" + tags.get('Environment', 'unknown')</span></span>
+<span class="line"><span style="color:#85E89D">    separator</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">''</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#85E89D">key</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">tags.get('Component', 'unknown') + "_" + tags.get('Role', 'unknown')</span></span>
+<span class="line"><span style="color:#85E89D">    separator</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">''</span></span>
+<span class="line"></span></code></pre>
+<p>Let’s go through the configuration one by one:</p>
+<ul>
+<li><strong>plugin</strong>: This is the name of the plugin that we are using. In our case, it is <code>aws_ec2</code>.</li>
+<li><strong>boto_profile</strong>: This is the name of the AWS profile that we are using. We are using the value of the <code>AWS_PROFILE</code> environment variable here. This is useful if you have multiple AWS profiles configured on your machine.</li>
+<li><strong>regions</strong>: This is the list of regions that we want to query for EC2 instances. In our case, we are only querying the <code>ap-south-1</code> region.</li>
+<li><strong>filters</strong>: This is the list of filters that we want to apply to get the EC2 instances in our inventory. In our case, we are only querying the running instances.</li>
+<li><strong>keyed_groups</strong>: This is where we are preparing the list of groups that we want to create in our inventory. The names of the groups are generated using the tags of the EC2 instances. We are creating two groups but you can add as many as you want
+<ul>
+<li><code>{COMPONENT}_{ROLE}_{ENVIRONMENT}</code> e.g. <code>app_api_production</code>, <code>newsletter_db_production</code>, <code>blog_web_staging</code>, etc. This gives us the ability to run the playbooks on specific EC2 instances in a specific environment.</li>
+<li><code>{COMPONENT}_{ROLE}</code>: e.g. <code>app_api</code>, <code>newsletter_db</code>, <code>blog_web</code>, etc. This gives us the ability to run the playbooks on specific EC2 instances regardless of the environment.</li>
+</ul>
+</li>
+</ul>
+<p>Once we have created the configuration file, we can use the <code>aws_ec2</code> module to get the list of EC2 instances. We can do this by running the following command:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># Use --list or --graph to get the list of EC2 instances</span></span>
+<span class="line"><span style="color:#B392F0">ansible-inventory</span><span style="color:#79B8FF"> -i</span><span style="color:#9ECBFF"> csfyi.aws_ec2.yml</span><span style="color:#79B8FF"> --list</span></span>
+<span class="line"><span style="color:#B392F0">ansible-inventory</span><span style="color:#79B8FF"> -i</span><span style="color:#9ECBFF"> csfyi.aws_ec2.yml</span><span style="color:#79B8FF"> --graph</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Add AWS_PROFILE if you are using multiple profiles in your machine</span></span>
+<span class="line"><span style="color:#E1E4E8">AWS_PROFILE</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">csfyi</span><span style="color:#B392F0"> ansible-inventory</span><span style="color:#79B8FF"> -i</span><span style="color:#9ECBFF"> csfyi.aws_ec2.yml</span><span style="color:#79B8FF"> --list</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># You can also use the following command to get the list of EC2 instances in a specific group</span></span>
+<span class="line"><span style="color:#B392F0">ansible-inventory</span><span style="color:#79B8FF"> -i</span><span style="color:#9ECBFF"> csfyi.aws_ec2.yml</span><span style="color:#79B8FF"> --host</span><span style="color:#9ECBFF"> ap</span><span style="color:#9ECBFF"> p_api_production</span></span>
+<span class="line"></span></code></pre>
+<p>If all goes well, you should see the list of EC2 instances in the output. Now that we have the inventory file ready, we can use it in the <code>ansible.cfg</code> file. You should add the following lines to the <code>ansible.cfg</code> file:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="ini"><code><span class="line"><span style="color:#B392F0">[defaults]</span></span>
+<span class="line"><span style="color:#6A737D"># ...</span></span>
+<span class="line"><span style="color:#F97583">enable_plugins</span><span style="color:#E1E4E8"> = aws_ec2</span></span>
+<span class="line"><span style="color:#F97583">inventory</span><span style="color:#E1E4E8"> = ./roadmap.aws_ec2.yml</span></span>
+<span class="line"><span style="color:#6A737D"># ...</span></span>
+<span class="line"></span></code></pre>
+<p>Now, you can use the host names in your playbooks. For example, if you want to run a playbook on all the EC2 instances in the <code>app_api_production</code> group, then you can do the following:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#E1E4E8">- </span><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Configure draw.roadmap.sh</span></span>
+<span class="line"><span style="color:#85E89D">  hosts</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">app_api_production</span><span style="color:#6A737D">  # Name generated by the aws_ec2 plugin</span></span>
+<span class="line"><span style="color:#85E89D">  become</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">yes</span></span>
+<span class="line"><span style="color:#85E89D">  become_method</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">sudo</span></span>
+<span class="line"><span style="color:#85E89D">  gather_facts</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">no</span></span>
+<span class="line"><span style="color:#85E89D">  roles</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - { </span><span style="color:#85E89D">role</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">base</span><span style="color:#E1E4E8">, </span><span style="color:#85E89D">tags</span><span style="color:#E1E4E8">: [ </span><span style="color:#9ECBFF">'base'</span><span style="color:#E1E4E8"> ] }</span></span>
+<span class="line"><span style="color:#E1E4E8">    - { </span><span style="color:#85E89D">role</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">nginx</span><span style="color:#E1E4E8">, </span><span style="color:#85E89D">tags</span><span style="color:#E1E4E8">: [ </span><span style="color:#9ECBFF">'nginx'</span><span style="color:#E1E4E8"> ] }</span></span>
+<span class="line"></span></code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, we learned how to dynamically populate the Ansible inventory with the IP address of EC2 instances. This makes it easier to manage the inventory file and also makes it easier to manage the EC2 instances themselves. I hope you found this article useful.</p> </div> </div>  </div> </div>  <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-139582634-1"></script> <script>
+    // @ts-nocheck
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-58155965-1');
+</script> <script type="text/javascript">
+  (function (C, A, L) {
+    let p = function (a, ar) {
+      a.q.push(ar);
+    };
+    let d = C.document;
+    C.Cal =
+      C.Cal ||
+      function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement('script')).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () {
+            p(api, arguments);
+          };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          typeof namespace === 'string'
+            ? (cal.ns[namespace] = api) && p(api, ar)
+            : p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+  })(window, '../../app.cal.com/embed/embed.js', 'init');
+  Cal('init', { origin: 'https://cal.com' });
+
+  Cal('ui', {
+    styles: { branding: { brandColor: '#000000' } },
+    hideEventTypeDetails: false,
+    layout: 'month_view',
+  });
+</script> </body>
+<!-- Mirrored from kamranahmed.info/posts/dynamically-load-ip-address-for-ec2-in-ansible by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Sep 2025 06:11:40 GMT -->
+</html>
